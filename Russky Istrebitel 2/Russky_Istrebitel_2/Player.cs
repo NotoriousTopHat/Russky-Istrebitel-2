@@ -19,8 +19,10 @@ namespace Russky_Istrebitel_2
         public Vector2 jetPosition;
         public Rectangle jetRectangle;
         public float speed;
+        public int health;
         public bool isColiding;
-        //Constructor
+        public bool isAlive;
+        //Constructor test git stuff
         public Player()
         {
 

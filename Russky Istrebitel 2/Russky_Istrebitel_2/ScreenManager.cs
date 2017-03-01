@@ -39,7 +39,7 @@ namespace Russky_Istrebitel_2
         }
         public ScreenManager()
         {
-            Dimensions = new Vector2(800, 800);
+            Dimensions = new Vector2(800, 600);
             currentScreen = new SplashScreen();
         }
 

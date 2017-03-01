@@ -19,37 +19,43 @@ namespace Russky_Istrebitel_2
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            this.Window.Title = "RUSSKY ISTREBITEL 2";
+            graphics.IsFullScreen = false;
             Content.RootDirectory = "Content";
         }
         //Inirialize
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.Dimensions.X;
+            graphics.PreferredBackBufferHeight = (int)ScreenManager.Instance.Dimensions.Y;
             base.Initialize();
         }
         //LoadContent
         protected override void LoadContent()
         {
-            
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            ScreenManager.Instance.GraphicsDevice = GraphicsDevice;
+            ScreenManager.Instance.SpriteBatch = spriteBatch;
+            ScreenManager.Instance.LoadContent(Content);
         }
         //UnloadContent
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            ScreenManager.Instance.UnloadContent();
         }
 
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        //Update
         protected override void Update(GameTime gameTime)
         {
+            ScreenManager.Instance.Update(gameTime);
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             base.Update(gameTime);
         }
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        //Draw
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);

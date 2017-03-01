@@ -15,20 +15,19 @@ namespace Russky_Istrebitel_2
 {
     public class Player
     {
-        public Texture2D jetTexture;
+        public Texture2D jetTexture, healthTexture, healthContainerTexture, shieldTexture;
         public Vector2 jetPosition;
         public Rectangle jetRectangle;
         public float speed;
         public int health;
+        public int shieldHealth;
         public bool isColiding;
         public bool isAlive;
-<<<<<<< HEAD
         //Constructor
-=======
-        //Constructor 
->>>>>>> 19e64b4419940c9997e3b70dcc1a2c00d63adb3d
         public Player()
         {
+            health = 200;
+            shieldHealth = 200;
 
         }
         //LoadContent

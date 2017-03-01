@@ -22,7 +22,11 @@ namespace Russky_Istrebitel_2
         public int health;
         public bool isColiding;
         public bool isAlive;
+<<<<<<< HEAD
         //Constructor
+=======
+        //Constructor 
+>>>>>>> 19e64b4419940c9997e3b70dcc1a2c00d63adb3d
         public Player()
         {
 

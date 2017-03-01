@@ -22,7 +22,7 @@ namespace Russky_Istrebitel_2
         public int health;
         public bool isColiding;
         public bool isAlive;
-        //Constructor test git stuff
+        //Constructor
         public Player()
         {
 
